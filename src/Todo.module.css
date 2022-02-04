@@ -1,0 +1,24 @@
+.takeInp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: 2% 35%;
+}
+.input {
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  padding: 1em;
+  width: 80%;
+}
+.input::placeholder {
+  color: black;
+}
+.inpBut {
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  height: 100%;
+  padding: 1em;
+}
