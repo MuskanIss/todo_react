@@ -1,11 +1,14 @@
 .listItem {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
-  width: 30%;
-  margin: 2% 35%;
+  width: 80%;
+  margin: 2% 10%;
   border-radius: 10px;
+}
+.inp {
+  width: 20%;
 }
 .title {
   margin-left: 15px;
@@ -16,9 +19,10 @@
   border-radius: 50%;
   margin-right: 15px;
 }
-.green {
-  border: 5px solid #0fe60f;
+.compItem {
+  justify-content: start;
+  opacity: 0.5;
 }
-.blue {
-  border: 5px solid blue;
+.comp {
+  text-decoration: line-through;
 }

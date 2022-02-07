@@ -1,12 +1,11 @@
 .takeInp {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 30%;
-  margin: 2% 35%;
+  width: 80%;
+  margin: 2% 10%;
 }
 .input {
-  border-radius: 10px;
   background-color: white;
   border: none;
   padding: 1em;
@@ -17,7 +16,6 @@
 }
 .inpBut {
   background-color: white;
-  border-radius: 10px;
   border: none;
   height: 100%;
   padding: 1em;

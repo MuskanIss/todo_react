@@ -1,19 +1,45 @@
 import React from "react";
 import styles from "./TodoItem.module.css";
+import { TodoInput } from "./TodoInput";
 
-export let TodoItem = ({ data }) => {
-  console.log(data.title);
-  let [color, setColor] = React.useState(styles.blue);
+export let TodoItem = ({
+  data,
+  deleteItem,
+  editItem,
+  editData,
+  addData,
+  addCheck,
+  setTitle,
+  title,
+}) => {
+  let [edit, setEdit] = React.useState(false);
   return (
     <div className={styles.listItem}>
-      <h3 className={styles.title}>{data.title}</h3>
-      <button
+      <input
+        type="checkbox"
         onClick={() => {
           data.status = !data.status;
-          setColor(data.status ? styles.green : styles.blue);
+          addCheck(data);
         }}
-        className={`${styles.but} ${color}`}
-      ></button>
+      />
+      <div className={styles.inp}>
+        {edit ? (
+          <TodoInput
+            addData={() => {
+              editData(data);
+              setEdit(false);
+            }}
+            setTitle={setTitle}
+            title={title}
+          />
+        ) : (
+          <h3 className={styles.title}>{data.title}</h3>
+        )}
+      </div>
+      <div>
+        <button onClick={() => setEdit(!edit)}>Edit</button>
+        <button onClick={() => deleteItem(data)}>Delete</button>
+      </div>
     </div>
   );
 };
